@@ -9,12 +9,11 @@ import MobileNav from "./MobileNav";
 const toggleCart = () => {
   console.log("You toggled nav bar");
 };
-function Navbar() {
-  const showNavbar = () => {
-    document.querySelector(".navbar").classList.add("show-navbar");
-    console.log(document.querySelector(".navbar"));
-  };
+const showNavbar = () => {
+  document.querySelector(".navbar").classList.add("show-navbar");
+};
 
+function Navbar() {
   return (
     <StyledNavbar>
       <button
