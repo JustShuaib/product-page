@@ -4,7 +4,7 @@ const StyledNavbar = styled.nav`
   display: flex;
   align-items: center;
   padding: 1.5rem;
-  max-width: 1220px;
+  max-width: 1440px;
   @media screen and (min-width: 729px) {
     & {
       padding-inline: 0;
@@ -36,7 +36,7 @@ const StyledNavbar = styled.nav`
     bottom: 0;
     right: 0;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--nav-bg);
     @media screen and (min-width: 729px) {
       & {
         position: relative;
@@ -69,7 +69,7 @@ const StyledNavbar = styled.nav`
       row-gap: 1rem;
       padding-top: 6rem;
       padding-left: 2rem;
-      background-color: white;
+      background-color: var(--white);
       list-style-type: none;
       @media screen and (min-width: 729px) {
         & {
@@ -77,7 +77,7 @@ const StyledNavbar = styled.nav`
           width: auto;
           flex-direction: row;
           row-gap: 0;
-          column-gap: 1rem;
+          column-gap: 1.5rem;
           margin-left: 1.5rem;
         }
       }
@@ -86,17 +86,20 @@ const StyledNavbar = styled.nav`
         text-transform: capitalize;
         text-decoration: none;
         font-weight: bold;
+        color: var(--very-dark-blue);
         @media screen and (min-width: 729px) {
           & {
             position: relative;
+            color: var(--dark-grayish-blue);
+            font-weight: normal;
             transition: all 0.3s ease-in;
             &:hover {
-              /* font-weight: bold; */
+              color: var(--black);
             }
             &::after {
               content: "";
               position: absolute;
-              bottom: -210%;
+              bottom: -2.1rem;
               width: 100%;
               display: block;
               height: 0;
@@ -130,7 +133,7 @@ const StyledNavbar = styled.nav`
     top: -0.5rem;
     right: -30%;
     background-color: orange;
-    color: white;
+    color: var(--white);
     padding: 0.1rem 0.4rem;
     border-radius: 50%;
     font-size: 0.7rem;
