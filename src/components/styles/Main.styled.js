@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const StyledMain = styled.main`
-  background-color: greenyellow;
   display: grid;
+  padding: 0 1.5rem;
   @media screen and (min-width: 729px) {
     & {
       grid-template-columns: repeat(2, 1fr);

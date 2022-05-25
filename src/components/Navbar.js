@@ -2,49 +2,31 @@ import React from "react";
 import StyledNavbar from "./styles/Navbar.styled";
 import logo from "../images/logo.svg";
 import hamburger from "../images/icon-menu.svg";
-import close from "../images/icon-close.svg";
 import cart from "../images/icon-cart.svg";
 import avatar from "../images/image-avatar.png";
+import MobileNav from "./MobileNav";
 
-const showNavbar = () => {
-  document.querySelector(".nav-container").classList.add("show-navbar");
-};
-const closeNavbar = () => {
-  document.querySelector(".nav-container").classList.remove("show-navbar");
-};
 const toggleCart = () => {
   console.log("You toggled nav bar");
 };
 function Navbar() {
+  const showNavbar = () => {
+    document.querySelector(".navbar").classList.add("show-navbar");
+    console.log(document.querySelector(".navbar"));
+  };
+
   return (
     <StyledNavbar>
-      <button type="button" onClick={showNavbar} className="hamburger">
+      <button
+        type="button"
+        onClick={showNavbar}
+        className="hamburger"
+        aria-label="open navbar"
+      >
         <img src={hamburger} alt="menu" />
       </button>
       <img src={logo} alt="logo" />
-      <div className="nav-container">
-        <button onClick={closeNavbar} className="close-btn">
-          <img src={close} alt="close button" />
-        </button>
-        <ul>
-          <li>
-            <a href="/">collections</a>
-          </li>
-          <li>
-            <a href="/">men</a>
-          </li>
-          <li>
-            <a href="/">women</a>
-          </li>
-
-          <li>
-            <a href="/">about</a>
-          </li>
-          <li>
-            <a href="/">contact</a>
-          </li>
-        </ul>
-      </div>
+      <MobileNav />
       <div className="cart-detail">
         <button className="cart" onClick={toggleCart}>
           <img src={cart} alt="cart icon" />
