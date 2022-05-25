@@ -6,12 +6,15 @@ import close from "../images/icon-close.svg";
 import cart from "../images/icon-cart.svg";
 import avatar from "../images/image-avatar.png";
 
-function showNavbar() {
+const showNavbar = () => {
   document.querySelector(".nav-container").classList.add("show-navbar");
-}
-function closeNavbar() {
+};
+const closeNavbar = () => {
   document.querySelector(".nav-container").classList.remove("show-navbar");
-}
+};
+const toggleCart = () => {
+  console.log("You toggled nav bar");
+};
 function Navbar() {
   return (
     <StyledNavbar>
@@ -43,10 +46,10 @@ function Navbar() {
         </ul>
       </div>
       <div className="cart-detail">
-        <div className="cart">
+        <button className="cart" onClick={toggleCart}>
           <img src={cart} alt="cart icon" />
-          <p className="cart-count">0</p>
-        </div>
+          <p className="cart-count">3</p>
+        </button>
         <img src={avatar} className="avatar" alt="avatar" />
       </div>
     </StyledNavbar>
