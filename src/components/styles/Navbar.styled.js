@@ -53,13 +53,13 @@ const StyledNavbar = styled.nav`
     margin-left: 1rem;
     width: 2.5rem;
     cursor: pointer;
-    &:hover {
-      border-radius: 50%;
-      border: 2px solid orange;
-    }
     @media screen and (min-width: 729px) {
       & {
         margin-left: 2rem;
+      }
+      &:hover {
+        border-radius: 50%;
+        border: 2px solid orange;
       }
     }
   }

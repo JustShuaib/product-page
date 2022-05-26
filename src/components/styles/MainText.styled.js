@@ -61,6 +61,7 @@ const StyledMainText = styled.section`
   .price {
     color: var(--dark-grayish-blue);
     font-weight: bold;
+    text-decoration: line-through;
   }
   .price-control {
     display: grid;
