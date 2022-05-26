@@ -25,11 +25,11 @@ const StyledCarousel = styled.div`
   }
   .prev {
     left: 1rem;
-    padding: 0.5rem 0.8rem 0.3rem 0.7rem;
+    padding: 0.7rem 1rem 0.5rem 0.9rem;
   }
   .next {
     right: 1rem;
-    padding: 0.5rem 0.7rem 0.3rem 0.8rem;
+    padding: 0.7rem 0.9rem 0.5rem 1rem;
   }
 `;
 export default StyledCarousel;
