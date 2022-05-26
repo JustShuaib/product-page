@@ -10,6 +10,14 @@ const StyledCart = styled.div`
   height: 15rem;
   border-radius: 10px;
   background-color: var(--white);
+  @media screen and (min-width: 729px) {
+    & {
+      width: 20rem;
+      box-shadow: 0 5px 15px gray;
+      left: 62rem;
+      transform: translateX(0);
+    }
+  }
   .cart-title {
     text-transform: capitalize;
     font-weight: bold;

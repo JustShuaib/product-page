@@ -8,6 +8,7 @@ const StyledLightBox = styled.div`
   right: 0;
   bottom: 0;
   height: 150vh;
+  z-index: 2;
 
   @media screen and (min-width: 729px) {
     & {
