@@ -6,14 +6,11 @@ import cart from "../images/icon-cart.svg";
 import avatar from "../images/image-avatar.png";
 import MobileNav from "./MobileNav";
 
-const toggleCart = () => {
-  console.log("You toggled nav bar");
-};
 const showNavbar = () => {
   document.querySelector(".navbar").classList.add("show-navbar");
 };
 
-function Navbar() {
+function Navbar({ setShowCart, itemPresent }) {
   return (
     <StyledNavbar>
       <button
@@ -27,9 +24,9 @@ function Navbar() {
       <img src={logo} alt="logo" />
       <MobileNav />
       <div className="cart-detail">
-        <button className="cart" onClick={toggleCart}>
+        <button className="cart" onClick={() => setShowCart((prev) => !prev)}>
           <img src={cart} alt="cart icon" />
-          <p className="cart-count">3</p>
+          {itemPresent && <p className="cart-count">3</p>}
         </button>
         <img src={avatar} className="avatar" alt="avatar" />
       </div>

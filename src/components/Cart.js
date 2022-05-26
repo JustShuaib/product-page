@@ -2,8 +2,7 @@ import React from "react";
 import StyledCart from "./styles/Cart.styled";
 import deleteBtn from "../images/icon-delete.svg";
 import img1 from "../images/image-product-1-thumbnail.jpg";
-const itemPresent = true;
-const Cart = () => {
+const Cart = ({ itemPresent }) => {
   return (
     <StyledCart>
       <p className="cart-title">cart</p>
