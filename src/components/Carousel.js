@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import StyledCarousel from "./styles/Carousel.styled";
 import Thumbnail from "./Thumbnail";
 import product1 from "../images/image-product-1.jpg";
 import product2 from "../images/image-product-2.jpg";
 import product3 from "../images/image-product-3.jpg";
 import product4 from "../images/image-product-4.jpg";
-
+import { Lightbox } from "../App";
 const Carousel = () => {
   const [presentImage, setPresentImage] = useState(0);
+  const openLightBox = useContext(Lightbox);
 
   const images = [product1, product2, product3, product4];
 
@@ -30,13 +31,13 @@ const Carousel = () => {
           <path
             d="M11 1 3 9l8 8"
             stroke="#1D2026"
-            stroke-width="3"
+            strokeWidth="3"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           />
         </svg>
       </button>
-      <div>
+      <div onClick={() => openLightBox(true)}>
         <img src={images[presentImage]} className="main-img" alt="" />
       </div>
       <button aria-label="next" className="next" onClick={handleNextSlide}>
@@ -44,9 +45,9 @@ const Carousel = () => {
           <path
             d="m2 1 8 8-8 8"
             stroke="#1D2026"
-            stroke-width="3"
+            strokeWidth="3"
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           />
         </svg>
       </button>
