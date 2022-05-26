@@ -11,7 +11,7 @@ const StyledMobileNav = styled.div`
   @media screen and (min-width: 729px) {
     & {
       position: relative;
-      z-index: 1;
+      z-index: 0;
       display: flex;
       background-color: white;
     }
