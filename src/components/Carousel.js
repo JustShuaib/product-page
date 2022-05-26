@@ -7,15 +7,20 @@ import product3 from "../images/image-product-3.jpg";
 import product4 from "../images/image-product-4.jpg";
 import prev from "../images/icon-previous.svg";
 import next from "../images/icon-next.svg";
-const images = [product1, product2, product3, product4];
+
 const Carousel = () => {
   const [presentImage, setPresentImage] = useState(0);
+
+  const images = [product1, product2, product3, product4];
+
   const handlePreviousSlide = () => {
     setPresentImage((prev) => (prev > 0 ? prev - 1 : images.length - 1));
   };
+
   const handleNextSlide = () => {
     setPresentImage((prev) => (prev < images.length - 1 ? prev + 1 : 0));
   };
+
   return (
     <StyledCarousel>
       <button
@@ -31,7 +36,7 @@ const Carousel = () => {
       <button aria-label="next" className="next" onClick={handleNextSlide}>
         <img src={next} alt="" />
       </button>
-      <Thumbnail />
+      <Thumbnail setImage={setPresentImage} />
     </StyledCarousel>
   );
 };
