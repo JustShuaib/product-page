@@ -7,17 +7,13 @@ const StyledMainText = styled.section`
     font-weight: bold;
     font-size: 0.8rem;
     letter-spacing: 0.08rem;
-    @media screen and (min-width: 729px) {
-      & {
-        margin-top: 2.5rem;
-      }
-    }
   }
 
   h1 {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 1.5rem;
+    margin-top: 0.5rem;
     @media screen and (min-width: 729px) {
       & {
         font-size: 2.5rem;
@@ -38,7 +34,7 @@ const StyledMainText = styled.section`
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     @media screen and (min-width: 729px) {
       & {
         flex-direction: column;
@@ -69,7 +65,6 @@ const StyledMainText = styled.section`
   .price-control {
     display: grid;
     row-gap: 1rem;
-    margin-bottom: 5rem;
     @media screen and (min-width: 729px) {
       & {
         grid-template-columns: 3.5fr 6.5fr;

@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
  --grayish-blue: hsl(220, 14%, 75%);
  --light-grayish-blue: hsl(223, 64%, 98%);
 --nav-bg : rgba(0,0,0,0.7);
+--light-white: rgba(255,255,255,0.4);
 }
  
 * {

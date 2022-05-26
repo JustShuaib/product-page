@@ -26,7 +26,7 @@ const Carousel = () => {
         <img src={prev} alt="" />
       </button>
       <div>
-        <img src={images[presentImage]} alt="" />
+        <img src={images[presentImage]} className="main-img" alt="" />
       </div>
       <button aria-label="next" className="next" onClick={handleNextSlide}>
         <img src={next} alt="" />
