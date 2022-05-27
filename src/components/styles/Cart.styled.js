@@ -7,15 +7,16 @@ const StyledCart = styled.div`
   z-index: 1;
   transform: translateX(-50%);
   width: 95%;
-  height: 15rem;
+  height: 18rem;
   border-radius: 10px;
   background-color: var(--white);
   @media screen and (min-width: 729px) {
     & {
       width: 20rem;
-      box-shadow: 0 5px 15px gray;
       left: 62rem;
+      box-shadow: 0 5px 15px gray;
       transform: translateX(0);
+      height: 15rem;
     }
   }
   .cart-title {

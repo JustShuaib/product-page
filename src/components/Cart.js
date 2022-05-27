@@ -2,19 +2,22 @@ import React from "react";
 import StyledCart from "./styles/Cart.styled";
 import deleteBtn from "../images/icon-delete.svg";
 import img1 from "../images/image-product-1-thumbnail.jpg";
-const Cart = ({ itemPresent }) => {
+const Cart = ({ itemCount }) => {
+  function calcTotal() {
+    return (125 * itemCount).toFixed(2);
+  }
   return (
     <StyledCart>
       <p className="cart-title">cart</p>
-      {itemPresent ? (
+      {itemCount > 0 ? (
         <>
           <div className="item-detail">
             <img src={img1} alt="" />
             <div>
               <p>Autumn Limited Edition</p>
               <p>
-                <span>$125.00</span> x <span>3</span>
-                <span className="total"> $375.00</span>
+                <span>$125.00</span> x <span>{itemCount}</span>
+                <span className="total"> ${calcTotal()}</span>
               </p>
             </div>
             <button className="delete-btn" aria-label="delete item">

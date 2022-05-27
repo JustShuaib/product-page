@@ -4,12 +4,16 @@ import Cart from "./Cart";
 import MainText from "./MainText";
 import StyledMain from "./styles/Main.styled";
 
-const Main = ({ showCart, itemPresent }) => {
+const Main = ({ showCart, setShowCart, itemCount, setItemCount }) => {
   return (
     <StyledMain>
-      {showCart && <Cart itemPresent={itemPresent} />}
+      {showCart && <Cart itemCount={itemCount} />}
       <Carousel />
-      <MainText />
+      <MainText
+        itemCount={itemCount}
+        setShowCart={setShowCart}
+        setItemCount={setItemCount}
+      />
     </StyledMain>
   );
 };

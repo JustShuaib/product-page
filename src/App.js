@@ -8,13 +8,19 @@ export const Lightbox = createContext(false);
 function App() {
   const [lightBoxOpen, setLightBoxOpen] = useState(false);
   const [showCart, setShowCart] = useState(false);
-  const itemPresent = true;
+  const [itemCount, setItemCount] = useState(0);
+
   return (
     <Fragment>
       <GlobalStyle />
-      <Navbar setShowCart={setShowCart} itemPresent={itemPresent} />
+      <Navbar setShowCart={setShowCart} count={itemCount} />
       <Lightbox.Provider value={setLightBoxOpen}>
-        <Main showCart={showCart} itemPresent={itemPresent} />
+        <Main
+          showCart={showCart}
+          setShowCart={setShowCart}
+          itemCount={itemCount}
+          setItemCount={setItemCount}
+        />
       </Lightbox.Provider>
       {lightBoxOpen && <LightBox setLightBoxOpen={setLightBoxOpen} />}
     </Fragment>
