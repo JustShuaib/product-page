@@ -2,7 +2,7 @@ import React from "react";
 import StyledCart from "./styles/Cart.styled";
 import deleteBtn from "../images/icon-delete.svg";
 import img1 from "../images/image-product-1-thumbnail.jpg";
-const Cart = ({ itemCount }) => {
+const Cart = ({ itemCount, setItemCount }) => {
   function calcTotal() {
     return (125 * itemCount).toFixed(2);
   }
@@ -20,7 +20,11 @@ const Cart = ({ itemCount }) => {
                 <span className="total"> ${calcTotal()}</span>
               </p>
             </div>
-            <button className="delete-btn" aria-label="delete item">
+            <button
+              className="delete-btn"
+              aria-label="delete item"
+              onClick={() => setItemCount(0)}
+            >
               <img src={deleteBtn} alt="" />
             </button>
           </div>

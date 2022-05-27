@@ -9,15 +9,21 @@ function App() {
   const [lightBoxOpen, setLightBoxOpen] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [itemCount, setItemCount] = useState(0);
+  const [itemPresent, setItemPresent] = useState(false);
 
   return (
     <Fragment>
       <GlobalStyle />
-      <Navbar setShowCart={setShowCart} count={itemCount} />
+      <Navbar
+        setShowCart={setShowCart}
+        itemPresent={itemPresent}
+        count={itemCount}
+      />
       <Lightbox.Provider value={setLightBoxOpen}>
         <Main
           showCart={showCart}
           setShowCart={setShowCart}
+          setItemPresent={setItemPresent}
           itemCount={itemCount}
           setItemCount={setItemCount}
         />

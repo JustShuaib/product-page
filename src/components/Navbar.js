@@ -10,7 +10,7 @@ const showNavbar = () => {
   document.querySelector(".navbar").classList.add("show-navbar");
 };
 
-function Navbar({ setShowCart, count }) {
+function Navbar({ itemPresent, setShowCart, count }) {
   return (
     <StyledNavbar>
       <button
@@ -26,7 +26,7 @@ function Navbar({ setShowCart, count }) {
       <div className="cart-detail">
         <button className="cart" onClick={() => setShowCart((prev) => !prev)}>
           <img src={cart} alt="cart icon" />
-          {count > 0 && <p className="cart-count">{count}</p>}
+          {count > 0 && itemPresent && <p className="cart-count">{count}</p>}
         </button>
         <img src={avatar} className="avatar" alt="avatar" />
       </div>
