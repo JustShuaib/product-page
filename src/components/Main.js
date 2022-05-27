@@ -13,7 +13,13 @@ const Main = ({
 }) => {
   return (
     <StyledMain>
-      {showCart && <Cart itemCount={itemCount} setItemCount={setItemCount} />}
+      {showCart && (
+        <Cart
+          itemCount={itemCount}
+          setShowCart={setShowCart}
+          setItemCount={setItemCount}
+        />
+      )}
       <Carousel />
       <MainText
         itemCount={itemCount}
