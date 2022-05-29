@@ -19,8 +19,6 @@ Users should be able to:
 
 #
 
-![](./src/images/mobile-screenshot.png)
-
 ## Links
 
 - Solution URL: [GitHub](https://github.com/JustShuaib/product-page)

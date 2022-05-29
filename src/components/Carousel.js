@@ -1,15 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import StyledCarousel from "./styles/Carousel.styled";
 import Thumbnail from "./Thumbnail";
 import product1 from "../images/image-product-1.jpg";
 import product2 from "../images/image-product-2.jpg";
 import product3 from "../images/image-product-3.jpg";
 import product4 from "../images/image-product-4.jpg";
-import { Lightbox } from "../App";
-const Carousel = () => {
+const Carousel = ({ setLightBoxOpen }) => {
   const [presentImage, setPresentImage] = useState(0);
-  const openLightBox = useContext(Lightbox);
-
   const images = [product1, product2, product3, product4];
 
   const handlePreviousSlide = () => {
@@ -37,7 +34,7 @@ const Carousel = () => {
           />
         </svg>
       </button>
-      <div onClick={() => openLightBox(true)}>
+      <div onClick={() => setLightBoxOpen(true)}>
         <img src={images[presentImage]} className="main-img" alt="" />
       </div>
       <button aria-label="next" className="next" onClick={handleNextSlide}>

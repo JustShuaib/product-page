@@ -9,7 +9,11 @@ const closeNavbar = () => {
 const MobileNav = () => {
   return (
     <StyledMobileNav className="navbar">
-      <button onClick={closeNavbar} className="close-btn">
+      <button
+        onClick={closeNavbar}
+        className="close-btn"
+        aria-label="close navbar"
+      >
         <img src={close} alt="close button" />
       </button>
       <ul>

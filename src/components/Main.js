@@ -10,6 +10,7 @@ const Main = ({
   itemCount,
   setItemCount,
   setItemPresent,
+  setLightBoxOpen,
 }) => {
   return (
     <StyledMain>
@@ -20,7 +21,7 @@ const Main = ({
           setItemCount={setItemCount}
         />
       )}
-      <Carousel />
+      <Carousel setLightBoxOpen={setLightBoxOpen} />
       <MainText
         itemCount={itemCount}
         setItemPresent={setItemPresent}

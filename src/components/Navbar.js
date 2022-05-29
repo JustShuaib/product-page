@@ -2,7 +2,7 @@ import React from "react";
 import StyledNavbar from "./styles/Navbar.styled";
 import logo from "../images/logo.svg";
 import hamburger from "../images/icon-menu.svg";
-import cart from "../images/icon-cart.svg";
+import cartIcon from "../images/icon-cart.svg";
 import avatar from "../images/image-avatar.png";
 import MobileNav from "./MobileNav";
 
@@ -24,8 +24,11 @@ function Navbar({ itemPresent, setShowCart, count }) {
       <img src={logo} alt="logo" />
       <MobileNav />
       <div className="cart-detail">
-        <button className="cart" onClick={() => setShowCart((prev) => !prev)}>
-          <img src={cart} alt="cart icon" />
+        <button
+          className="cart"
+          onClick={() => setShowCart((prevState) => !prevState)}
+        >
+          <img src={cartIcon} alt="cart icon" />
           {count > 0 && itemPresent && <p className="cart-count">{count}</p>}
         </button>
         <img src={avatar} className="avatar" alt="avatar" />
