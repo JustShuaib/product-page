@@ -9,6 +9,7 @@ const Main = ({
   setShowCart,
   itemCount,
   setItemCount,
+  itemPresent,
   setItemPresent,
   setLightBoxOpen,
 }) => {
@@ -17,7 +18,8 @@ const Main = ({
       {showCart && (
         <Cart
           itemCount={itemCount}
-          setShowCart={setShowCart}
+          itemPresent={itemPresent}
+          setItemPresent={setItemPresent}
           setItemCount={setItemCount}
         />
       )}

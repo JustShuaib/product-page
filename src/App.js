@@ -22,6 +22,7 @@ function App() {
       <Main
         showCart={showCart}
         setShowCart={setShowCart}
+        itemPresent={itemPresent}
         setItemPresent={setItemPresent}
         itemCount={itemCount}
         setItemCount={setItemCount}
