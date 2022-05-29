@@ -80,8 +80,8 @@ const StyledMainText = styled.section`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.3rem 1rem;
-      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
       font-size: 1.7rem;
       font-weight: bold;
       button {
@@ -98,8 +98,8 @@ const StyledMainText = styled.section`
     .cart-btn {
       background-color: var(--pry-orange);
       border: none;
-      border-radius: 5px;
-      padding: 0.6rem 0;
+      border-radius: 10px;
+      padding: 1rem 0;
       text-align: center;
       color: var(--white);
       cursor: pointer;

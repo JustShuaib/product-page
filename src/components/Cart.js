@@ -3,9 +3,8 @@ import StyledCart from "./styles/Cart.styled";
 import deleteBtn from "../images/icon-delete.svg";
 import img1 from "../images/image-product-1-thumbnail.jpg";
 const Cart = ({ itemCount, setItemCount, setShowCart }) => {
-  function calcTotal() {
-    return (125 * itemCount).toFixed(2);
-  }
+  const calcTotal = () => (125 * itemCount).toFixed(2);
+
   const deleteItem = () => {
     setShowCart(false);
     setItemCount(0);
@@ -18,7 +17,7 @@ const Cart = ({ itemCount, setItemCount, setShowCart }) => {
           <div className="item-detail">
             <img src={img1} alt="" />
             <div>
-              <p>Autumn Limited Edition</p>
+              <p>Autumn Limited Edition...</p>
               <p>
                 <span>$125.00</span> x <span>{itemCount}</span>
                 <span className="total"> ${calcTotal()}</span>

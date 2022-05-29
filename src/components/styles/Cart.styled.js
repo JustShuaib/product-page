@@ -14,7 +14,7 @@ const StyledCart = styled.div`
     & {
       width: 20rem;
       left: 62rem;
-      box-shadow: 0 5px 15px gray;
+      box-shadow: 0 5px 15px var(--grayish-blue);
       transform: translateX(0);
       height: 15rem;
     }
@@ -27,20 +27,30 @@ const StyledCart = styled.div`
   }
   .item-detail {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    margin-block: 1.5rem;
-    padding-inline: 1rem;
+    margin: 1.5rem auto;
     column-gap: 0.5rem;
+    margin-top: 3.5rem;
+    width: 90%;
     img {
       width: 3rem;
       border-radius: 5px;
+      margin-right: 1rem;
+    }
+    @media screen and (min-width: 729px) {
+      & {
+        margin-top: 1.8rem;
+      }
+      img {
+        margin-right: 0.7rem;
+      }
     }
   }
   .delete-btn {
     background: none;
     border: none;
     width: 1.2rem;
+    margin-left: auto;
     img {
       border-radius: 0;
       width: 100%;
@@ -56,7 +66,7 @@ const StyledCart = styled.div`
     display: block;
     border: none;
     border-radius: 10px;
-    padding: 0.8rem;
+    padding: 1rem;
     margin: 0 auto;
     text-align: center;
     text-transform: capitalize;
