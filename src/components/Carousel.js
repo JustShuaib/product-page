@@ -9,14 +9,27 @@ const Carousel = ({ setLightBoxOpen }) => {
   const [presentImage, setPresentImage] = useState(0);
   const images = [product1, product2, product3, product4];
 
+  const lightboxImages =
+    document.querySelector(".container")?.lastElementChild.lastElementChild
+      .children;
+
   const handlePreviousSlide = () => {
     setPresentImage((prev) => (prev > 0 ? prev - 1 : images.length - 1));
+
+    [...lightboxImages].forEach((img) => img.classList.remove("active"));
+
+    lightboxImages[presentImage > 0 ? presentImage - 1 : 3].classList.add(
+      "active"
+    );
   };
 
   const handleNextSlide = () => {
     setPresentImage((prev) => (prev < images.length - 1 ? prev + 1 : 0));
+    [...lightboxImages].forEach((img) => img.classList.remove("active"));
+    lightboxImages[presentImage === 3 ? 0 : presentImage + 1].classList.add(
+      "active"
+    );
   };
-
   return (
     <StyledCarousel>
       <button
@@ -48,7 +61,7 @@ const Carousel = ({ setLightBoxOpen }) => {
           />
         </svg>
       </button>
-      <Thumbnail setImage={setPresentImage} />
+      <Thumbnail setPresentImage={setPresentImage} />
     </StyledCarousel>
   );
 };

@@ -5,11 +5,9 @@ const MainText = ({ itemCount, setShowCart, setItemCount, setItemPresent }) => {
     if (itemCount > 0) {
       setShowCart(true);
       setItemPresent(true);
-    } else {
-      setItemPresent(false);
-      setShowCart(false);
     }
   };
+
   return (
     <StyledMainText>
       <p className="head-copy">sneaker company</p>
