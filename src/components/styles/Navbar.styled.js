@@ -45,7 +45,7 @@ const StyledNavbar = styled.nav`
     right: -30%;
     background-color: orange;
     color: var(--white);
-    padding: 0.1rem 0.4rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 50%;
     font-size: 0.7rem;
   }

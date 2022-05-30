@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const StyledCart = styled.div`
   position: absolute;
-  top: 7rem;
+  top: 6rem;
   left: 50%;
   z-index: 1;
   transform: translateX(-50%);
   width: 95%;
-  height: 18rem;
+  height: 16.5rem;
   border-radius: 10px;
   background-color: var(--white);
   @media screen and (min-width: 729px) {
@@ -22,7 +22,8 @@ const StyledCart = styled.div`
   .cart-title {
     text-transform: capitalize;
     font-weight: bold;
-    padding: 1rem;
+    font-size: 1.3rem;
+    padding: 1.5rem;
     border-bottom: 1px solid var(--grayish-blue);
   }
   .item-detail {
@@ -30,8 +31,9 @@ const StyledCart = styled.div`
     align-items: center;
     margin: 1.5rem auto;
     column-gap: 0.5rem;
-    margin-top: 3.5rem;
-    width: 90%;
+    margin-top: 2rem;
+    width: 85%;
+    color: var(--dark-grayish-blue);
     img {
       width: 3rem;
       border-radius: 5px;
@@ -58,15 +60,16 @@ const StyledCart = styled.div`
   }
   .total {
     font-weight: bold;
+    color: var(--very-dark-blue);
   }
   .checkout-btn {
     background-color: var(--pry-orange);
     color: white;
-    width: 90%;
+    width: 85%;
     display: block;
     border: none;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1.2rem;
     margin: 0 auto;
     text-align: center;
     text-transform: capitalize;

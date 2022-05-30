@@ -4,6 +4,7 @@ const StyledCarousel = styled.div`
   margin-inline: -1.5rem;
   .main-img {
     width: 100%;
+    height: 19.5rem;
     @media screen and (min-width: 729px) {
       & {
         border-radius: 20px;

@@ -5,14 +5,14 @@ const StyledMainText = styled.section`
     color: var(--pry-orange);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.8rem;
-    letter-spacing: 0.08rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
   }
 
   h1 {
     text-transform: capitalize;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 0.5rem;
     @media screen and (min-width: 729px) {
       & {
@@ -35,6 +35,7 @@ const StyledMainText = styled.section`
     justify-content: space-between;
     font-weight: bold;
     margin-bottom: 2rem;
+    margin-top: 2rem;
     @media screen and (min-width: 729px) {
       & {
         flex-direction: column;
@@ -44,11 +45,11 @@ const StyledMainText = styled.section`
 
     div {
       display: flex;
-      column-gap: 0.5rem;
+      column-gap: 1rem;
     }
   }
   .new-price {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: bold;
   }
   .discount {
@@ -56,7 +57,8 @@ const StyledMainText = styled.section`
     background-color: var(--pry-pale-orange);
     color: var(--pry-orange);
     font-weight: bold;
-    padding: 0.2rem 0.4rem;
+    padding: 0.4rem;
+    padding-bottom: 0.2rem;
   }
   .price {
     color: var(--dark-grayish-blue);
@@ -106,7 +108,8 @@ const StyledMainText = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
-      column-gap: 0.5rem;
+      column-gap: 1rem;
+      box-shadow: 5px 15px 20px 10px var(--pry-pale-orange);
     }
   }
 `;
