@@ -2,6 +2,11 @@ import styled from "styled-components";
 const StyledCarousel = styled.div`
   position: relative;
   margin-inline: -1.5rem;
+  @media screen and (min-width: 729px) {
+    & {
+      margin-inline: 0;
+    }
+  }
   .main-img {
     width: 100%;
     height: 19.5rem;

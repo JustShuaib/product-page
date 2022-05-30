@@ -15,6 +15,11 @@ const StyledLightBox = styled.div`
       display: block;
     }
   }
+  @media screen and (min-width: 1399px) {
+    & {
+      height: 100%;
+    }
+  }
   .container {
     position: absolute;
     top: 50%;
@@ -38,7 +43,7 @@ const StyledLightBox = styled.div`
     .close-btn {
       position: absolute;
       top: -4rem;
-      right: -1rem;
+      right: 0;
       border: none;
       background: none;
       &:hover path {

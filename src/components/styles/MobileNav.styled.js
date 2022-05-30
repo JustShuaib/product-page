@@ -48,8 +48,8 @@ const StyledMobileNav = styled.div`
         width: auto;
         flex-direction: row;
         row-gap: 0;
-        column-gap: 1.5rem;
-        margin-left: 1.5rem;
+        column-gap: 2rem;
+        margin-left: 3rem;
       }
     }
 

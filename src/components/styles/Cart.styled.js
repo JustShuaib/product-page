@@ -12,11 +12,16 @@ const StyledCart = styled.div`
   background-color: var(--white);
   @media screen and (min-width: 729px) {
     & {
-      width: 20rem;
-      left: 62rem;
-      box-shadow: 0 5px 15px var(--grayish-blue);
+      left: 60rem;
+      top: 5rem;
+      width: 22rem;
+      box-shadow: -1px 5px 20px var(--dark-grayish-blue);
       transform: translateX(0);
-      height: 15rem;
+    }
+  }
+  @media screen and (min-width: 1399px) {
+    & {
+      left: 65rem;
     }
   }
   .cart-title {
@@ -53,6 +58,7 @@ const StyledCart = styled.div`
     border: none;
     width: 1.2rem;
     margin-left: auto;
+    cursor: pointer;
     img {
       border-radius: 0;
       width: 100%;
@@ -74,6 +80,10 @@ const StyledCart = styled.div`
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.05rem;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.75;
+    }
   }
   .empty-text {
     text-align: center;

@@ -7,6 +7,12 @@ const StyledMainText = styled.section`
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
+    @media screen and (min-width: 729px) {
+      & {
+        font-size: 1rem;
+        margin-top: 0;
+      }
+    }
   }
 
   h1 {
@@ -16,7 +22,7 @@ const StyledMainText = styled.section`
     margin-top: 0.5rem;
     @media screen and (min-width: 729px) {
       & {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
     }
   }
@@ -26,7 +32,7 @@ const StyledMainText = styled.section`
     color: var(--dark-grayish-blue);
     @media screen and (min-width: 729px) {
       & {
-        margin-top: 1.7rem;
+        margin-block: 2rem;
       }
     }
   }
@@ -34,12 +40,11 @@ const StyledMainText = styled.section`
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-block: 2rem;
     @media screen and (min-width: 729px) {
       & {
         flex-direction: column;
-        row-gap: 0.5rem;
+        row-gap: 1rem;
       }
     }
 
@@ -92,6 +97,9 @@ const StyledMainText = styled.section`
         cursor: pointer;
         font: inherit;
         color: var(--pry-orange);
+        &:hover {
+          opacity: 0.75;
+        }
       }
       span {
         font-weight: bold;
@@ -110,6 +118,9 @@ const StyledMainText = styled.section`
       justify-content: center;
       column-gap: 1rem;
       box-shadow: 5px 15px 20px 10px var(--pry-pale-orange);
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 `;
